@@ -25,7 +25,7 @@ Including another URLconf
 from django.urls import path
 from django.views.decorators.csrf import csrf_exempt
 from graphene_file_upload.django import FileUploadGraphQLView
-from challenges.schema import schema  # Adjust the import if your schema file is in a different location
+from challenges.schema import schema 
 
 urlpatterns = [
     path("django_csv_graphQL/", csrf_exempt(FileUploadGraphQLView.as_view(schema=schema)), name="django_csv_graphQL"),
